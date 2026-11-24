@@ -1,4 +1,3 @@
-
 #!/bin/bash
 set -e
 
@@ -7,10 +6,15 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-echo "Executing scenario..."
+echo "Executing Scenario 3..."
 
-setfacl -m u:acl_alice:rw- /srv/acl-homework/three/record.txt
+# Allow Alice to traverse the parent directory
+setfacl -m u:acl_alice:--x /srv/acl-homework
 
-setfacl -m m::r-- /srv/acl-homework/three/record.txt
+# Allow Alice to access directory three
+setfacl -m u:acl_alice:rx /srv/acl-homework/three
 
-echo "Scenario complete."
+# Grant Alice read-only access to record.txt
+setfacl -m u:acl_alice:r-- /srv/acl-homework/three/record.txt
+
+echo "Scenario 3 complete."
