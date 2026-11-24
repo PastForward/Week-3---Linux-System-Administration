@@ -111,6 +111,6 @@ The homework document provides detailed guidance for each scenario, including th
 Clone the repository in a Virtual Machine:
 
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/PastForward/Week-3---Linux-System-Administration
+cd https://github.com/PastForward/Week-3---Linux-System-Administration
 ```
