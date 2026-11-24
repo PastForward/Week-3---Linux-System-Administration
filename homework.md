@@ -20,6 +20,8 @@ For each scenario:
 
 ---
 
+# RUN setup_homework.sh FIRST, THEN RUN THE SCENARIOS
+
 # Scenario 1 – Investigating File and Directory Permissions
 
 ## Step 1: Execute the Scenario

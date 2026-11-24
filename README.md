@@ -20,6 +20,8 @@ The lab focuses on developing practical Linux system administration and security
 
 ## Scenarios
 
+### Before running the Scenarios, ensure that the setup_homework.sh file was run before. This will download all the dependencies needed for this homework.
+
 ### Scenario 1 – File and Directory Permissions
 - Investigating traditional Linux permissions and ownership.
 - Understanding named users and groups in ACLs.
