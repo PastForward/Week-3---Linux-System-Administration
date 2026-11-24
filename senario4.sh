@@ -1,4 +1,3 @@
-
 #!/bin/bash
 set -e
 
@@ -9,15 +8,18 @@ fi
 
 echo "Executing scenario..."
 
+# Remove existing scenario account if present
 if id lab_tempuser &>/dev/null; then
-    echo "Scenario account already exists. Reset the VM first."
-    exit 1
+    userdel -r lab_tempuser
 fi
 
+# Create scenario account
 useradd -m -s /bin/bash lab_tempuser
 
+# Add user to reviewers group
 usermod -aG acl_reviewers lab_tempuser
 
+# Lock the account password
 passwd -l lab_tempuser
 
 echo "Scenario complete."
